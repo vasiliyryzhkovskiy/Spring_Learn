@@ -12,4 +12,9 @@
         <constructor-arg value="Vasiliy"/>
     </bean>
 
+    <bean id="musicBean"
+          class="ru.vasiliyryzhkovskiy.springcourse.RockMusic">
+    </bean>
+
+
 </beans>
