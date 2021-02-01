@@ -1,6 +1,6 @@
-package ru.vasiliyryzhkovskiy.springcourse;
-
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import ru.vasiliyryzhkovskiy.springcourse.Music;
+import ru.vasiliyryzhkovskiy.springcourse.MusicPlayer;
 
 /**
  * @author Vasiliy Ryzhkovskiy

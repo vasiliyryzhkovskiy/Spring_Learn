@@ -1,6 +1,5 @@
-package ru.vasiliyryzhkovskiy.springcourse;
-
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import ru.vasiliyryzhkovskiy.springcourse.TestBean;
 
 /**
  * Класс демонстрации работы spring bean
