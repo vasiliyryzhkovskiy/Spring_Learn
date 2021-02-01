@@ -3,6 +3,8 @@ import ru.vasiliyryzhkovskiy.springcourse.Music;
 import ru.vasiliyryzhkovskiy.springcourse.MusicPlayer;
 
 /**
+ * С использованием конструкции new создаём экземляр объекта MusicPlayer
+ *
  * @author Vasiliy Ryzhkovskiy
  */
 public class TestMusicSpring {
