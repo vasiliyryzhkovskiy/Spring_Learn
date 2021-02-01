@@ -13,8 +13,15 @@
     </bean>
 
     <bean id="musicBean"
-          class="ru.vasiliyryzhkovskiy.springcourse.RockMusic">
+          class="ru.vasiliyryzhkovskiy.springcourse.ClassicalMusic">
     </bean>
+
+    <bean id="musicPlayerBean"
+          class="ru.vasiliyryzhkovskiy.springcourse.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
+        <!-- ссылка на BEAN !!!!  musicBean -->
+    </bean>
+
 
 
 </beans>
