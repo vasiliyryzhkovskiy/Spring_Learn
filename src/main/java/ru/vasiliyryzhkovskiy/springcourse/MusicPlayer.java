@@ -6,6 +6,28 @@ package ru.vasiliyryzhkovskiy.springcourse;
 public class MusicPlayer {
     private Music music;
 
+    /** название музыкального плеера */
+    private String name;
+
+    /** уровень громкости плеера */
+    private int volume;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setVolume(int volume) {
+        this.volume = volume;
+    }
+
     /** def constructor need for spring bean musicPlayerSetterBean
      * @see  /src/main/resources/applicationContext.xml
      */
