@@ -28,6 +28,8 @@
     <bean id="musicPlayerSetterBean"
           class="ru.vasiliyryzhkovskiy.springcourse.MusicPlayer">
         <property name="music" ref="musicBean"/>
+        <property name="name" value="Some name"/>
+        <property name="volume" value="50"/>
     </bean>
 
     <!-- bean для setter`a класса MusicPlayer -->

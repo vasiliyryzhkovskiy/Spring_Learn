@@ -17,6 +17,9 @@ public class TestMusicSetter {
 
         musicPlayer.playMusic();
 
+        System.out.println("musicPlayer name = " + musicPlayer.getName()) ;
+        System.out.println("musicPlayer volume = " + musicPlayer.getVolume()) ;
+
         // обязательно закрываем контекст
         context.close();
     }
