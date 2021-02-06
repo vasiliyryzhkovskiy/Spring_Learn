@@ -24,7 +24,7 @@
         <!-- ссылка на BEAN !!!!  musicBean -->
     </bean>
 
-    <!-- bean для setter`a класса MusicPlayer -->
+    <!-- bean для setter`a класса TestMusicSetter -->
     <!-- Spring в классе MusicPlayer ищет метод setMusic - удаляет set и заглавную букву переводит в нижний регистр -->
     <!-- поэтому здесь указано имеено name="music", а не name="setMusic" -->
     <bean id="musicPlayerSetterBean"
@@ -34,10 +34,39 @@
         <property name="volume" value="50"/>
     </bean>
 
-    <!-- bean для setter`a класса MusicPlayer -->
+    <!-- bean для property  класса TestMusicProperties -->
     <bean id="musicPlayerPropertyBean"
           class="ru.vasiliyryzhkovskiy.springcourse.MusicPlayer">
         <property name="music" ref="musicBean"/>
+        <property name="name" value="${musicPlayer.name}"/>
+        <property name="volume" value="${musicPlayer.volume}"/>
+    </bean>
+
+    <bean id="classicalMusicBean"
+          class="ru.vasiliyryzhkovskiy.springcourse.ClassicalMusic">
+    </bean>
+
+    <bean id="rockMusicBean"
+          class="ru.vasiliyryzhkovskiy.springcourse.RockMusic">
+    </bean>
+
+    <bean id="technoMusicBean"
+          class="ru.vasiliyryzhkovskiy.springcourse.TechhoMusic">
+    </bean>
+
+
+    <!-- bean for List<bean>   MusicPlayer -->
+    <bean id="musicPlayerListsBean"
+          class="ru.vasiliyryzhkovskiy.springcourse.MusicPlayer">
+
+        <property name="musicList">
+            <list>
+                <ref bean="classicalMusicBean"/>
+                <ref bean="rockMusicBean"/>
+                <ref bean="technoMusicBean"/>
+            </list>
+        </property>
+
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
     </bean>
