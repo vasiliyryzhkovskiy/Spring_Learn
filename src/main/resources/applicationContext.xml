@@ -38,6 +38,8 @@
     <bean id="musicPlayerPropertyBean"
           class="ru.vasiliyryzhkovskiy.springcourse.MusicPlayer">
         <property name="music" ref="musicBean"/>
+        <property name="name" value="${musicPlayer.name}"/>
+        <property name="volume" value="${musicPlayer.volume}"/>
     </bean>
 
 
