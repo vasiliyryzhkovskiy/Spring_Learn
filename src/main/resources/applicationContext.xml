@@ -22,6 +22,19 @@
         <!-- ссылка на BEAN !!!!  musicBean -->
     </bean>
 
+    <!-- bean для setter`a класса MusicPlayer -->
+    <!-- Spring в классе MusicPlayer ищет метод setMusic - удаляет set и заглавную букву переводит в нижний регистр -->
+    <!-- поэтому здесь указано имеено name="music", а не name="setMusic" -->
+    <bean id="musicPlayerSetterBean"
+          class="ru.vasiliyryzhkovskiy.springcourse.MusicPlayer">
+        <property name="music" ref="musicBean"/>
+    </bean>
+
+    <!-- bean для setter`a класса MusicPlayer -->
+    <bean id="musicPlayerPropertyBean"
+          class="ru.vasiliyryzhkovskiy.springcourse.MusicPlayer">
+        <property name="music" ref="musicBean"/>
+    </bean>
 
 
 </beans>
