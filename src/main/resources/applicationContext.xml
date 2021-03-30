@@ -34,6 +34,16 @@
         <property name="volume" value="50"/>
     </bean>
 
+    <!-- bean для setter`a класса TestMusicScope -->
+    <!-- поэтому здесь указано имеено name="music", а не name="setMusic" -->
+    <bean id="musicPlayerScopeBean"
+          class="ru.vasiliyryzhkovskiy.springcourse.MusicPlayer"
+          scope="prototype">
+        <property name="music" ref="musicBean"/>
+        <property name="name" value="Some name"/>
+        <property name="volume" value="50"/>
+    </bean>
+
     <!-- bean для property  класса TestMusicProperties -->
     <bean id="musicPlayerPropertyBean"
           class="ru.vasiliyryzhkovskiy.springcourse.MusicPlayer">
