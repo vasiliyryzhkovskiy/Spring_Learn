@@ -1,19 +1,21 @@
+package OLD;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ru.vasiliyryzhkovskiy.springcourse.MusicPlayer;
 
 /**
- * Класс демонстрации работы spring с setter
+ * Класс демонстрации работы spring с properties файлом
  *
  * @author Vasiliy Ryzhkovskiy
  */
-public class TestMusicSetter {
+public class TestMusicProperties {
 
     public static void main(String[] args) {
         // создаём переменную spring контекста, которая читает файл applicationContext.xml
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         // используем bean musicPlayerSetterBean
-        MusicPlayer musicPlayer = context.getBean("musicPlayerSetterBean", MusicPlayer.class);
+        MusicPlayer musicPlayer = context.getBean("musicPlayerPropertyBean", MusicPlayer.class);
 
         musicPlayer.playMusic();
 

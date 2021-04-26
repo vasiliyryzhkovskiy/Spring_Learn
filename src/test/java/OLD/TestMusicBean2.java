@@ -1,18 +1,21 @@
+package OLD;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import ru.vasiliyryzhkovskiy.springcourse.JazzMusic;
+import ru.vasiliyryzhkovskiy.springcourse.ClassicalMusic;
 
 /**
- *
+ * показан процесс инициализации бина, работы и дестроя
  */
-public class TestMusicBeanFactory {
+public class TestMusicBean2 {
 
     public static void main(String[] args) {
         // создаём переменную spring контекста, которая читает файл applicationContext.xml
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        JazzMusic jazzMusic = context.getBean("jazzBeanFactory", JazzMusic.class);
+        ClassicalMusic classicalMusic = context.getBean("musicBean", ClassicalMusic.class);
 
-        System.out.println(jazzMusic.getSong());
+        // показан процесс инициализации бина, работы и дестроя
+        System.out.println(classicalMusic.getSong());
 
         // обязательно закрываем контекст
         context.close();

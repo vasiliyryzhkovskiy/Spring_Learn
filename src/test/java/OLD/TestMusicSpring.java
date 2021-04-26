@@ -1,3 +1,5 @@
+package OLD;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ru.vasiliyryzhkovskiy.springcourse.Music;
 import ru.vasiliyryzhkovskiy.springcourse.MusicPlayer;
