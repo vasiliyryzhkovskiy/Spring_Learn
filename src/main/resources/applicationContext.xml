@@ -14,11 +14,11 @@
         <constructor-arg value="Vasiliy"/>
     </bean>
 
-        <bean id="musicBean"
-              class="ru.vasiliyryzhkovskiy.springcourse.ClassicalMusic"
-              init-method="doMyInit"
-              destroy-method="doMyDestroy">
-        </bean>
+    <bean id="musicBean"
+          class="ru.vasiliyryzhkovskiy.springcourse.ClassicalMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy">
+    </bean>
 
     <bean id="jazzBeanFactory"
           class="ru.vasiliyryzhkovskiy.springcourse.JazzMusic"
@@ -33,9 +33,9 @@
         <!-- ссылка на BEAN !!!!  musicBean -->
     </bean>
 
-<!--     bean для setter`a класса TestMusicSetter-->
-<!--     Spring в классе MusicPlayer ищет метод setMusic - удаляет set и заглавную букву переводит в нижний регистр-->
-<!--     поэтому здесь указано имеено name="music", а не name="setMusic"-->
+    <!--     bean для setter`a класса TestMusicSetter-->
+    <!--     Spring в классе MusicPlayer ищет метод setMusic - удаляет set и заглавную букву переводит в нижний регистр-->
+    <!--     поэтому здесь указано имеено name="music", а не name="setMusic"-->
     <bean id="musicPlayerSetterBean"
           class="ru.vasiliyryzhkovskiy.springcourse.MusicPlayer">
         <property name="music" ref="musicBean"/>
