@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
  *
  */
 
-@Component("someElectroMusic")
+@Component("ElectroMusicBean")
 public class ElectroMusic implements Music {
     @Override
     public String getSong() {
