@@ -1,6 +1,5 @@
 # Spring_Learn
 
-
 Проект создан на основе maven archetype: maven-archetype-webapp:RELEASE
 
 Подключены зависимости

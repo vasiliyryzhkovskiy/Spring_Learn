@@ -1,20 +1,18 @@
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import ru.vasiliyryzhkovskiy.springcourse.MusicPlayer;
+import ru.vasiliyryzhkovskiy.springcourse.JazzMusic;
 
 /**
- * Здесь показан пример из листа, содержащий spring bean
  *
- * @author Vasiliy Ryzhkovskiy
  */
-public class TestMusicListOfSpringBeans {
+public class TestMusicBeanFactory {
 
     public static void main(String[] args) {
         // создаём переменную spring контекста, которая читает файл applicationContext.xml
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        MusicPlayer musicPlayer = context.getBean("musicPlayerListsBean", MusicPlayer.class);
+        JazzMusic jazzMusic = context.getBean("jazzBeanFactory", JazzMusic.class);
 
-        musicPlayer.playMusicList();
+        System.out.println(jazzMusic.getSong());
 
         // обязательно закрываем контекст
         context.close();

@@ -10,16 +10,23 @@ public class MusicPlayer {
     private Music music;
     private List<Music> musicList = new ArrayList<>();
 
-    /** название музыкального плеера */
+    /**
+     * название музыкального плеера
+     */
     private String name;
 
-    /** уровень громкости плеера */
+    /**
+     * уровень громкости плеера
+     */
     private int volume;
 
-    /** def constructor need for spring bean musicPlayerSetterBean
-     * @see  /src/main/resources/applicationContext.xml
+    /**
+     * def constructor need for spring bean musicPlayerSetterBean
+     *
+     * @see /src/main/resources/applicationContext.xml
      */
-    public MusicPlayer() { }
+    public MusicPlayer() {
+    }
 
     // для IoC
     public MusicPlayer(Music music) {
@@ -57,7 +64,7 @@ public class MusicPlayer {
     }
 
     public void playMusicList() {
-        for(Music music : musicList) {
+        for (Music music : musicList) {
             System.out.println("Playing: " + music.getClass().getSimpleName() + " : " + music.getSong());
         }
     }

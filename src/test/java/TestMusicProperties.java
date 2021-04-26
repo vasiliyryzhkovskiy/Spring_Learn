@@ -17,8 +17,8 @@ public class TestMusicProperties {
 
         musicPlayer.playMusic();
 
-        System.out.println("musicPlayer name = " + musicPlayer.getName()) ;
-        System.out.println("musicPlayer volume = " + musicPlayer.getVolume()) ;
+        System.out.println("musicPlayer name = " + musicPlayer.getName());
+        System.out.println("musicPlayer volume = " + musicPlayer.getVolume());
 
         // обязательно закрываем контекст
         context.close();

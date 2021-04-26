@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans  xmlns="http://www.springframework.org/schema/beans"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:context="http://www.springframework.org/schema/context"
-        xsi:schemaLocation="http://www.springframework.org/schema/beans
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
@@ -14,8 +14,17 @@
         <constructor-arg value="Vasiliy"/>
     </bean>
 
-    <bean id="musicBean"
-          class="ru.vasiliyryzhkovskiy.springcourse.ClassicalMusic">
+        <bean id="musicBean"
+              class="ru.vasiliyryzhkovskiy.springcourse.ClassicalMusic"
+              init-method="doMyInit"
+              destroy-method="doMyDestroy">
+        </bean>
+
+    <bean id="jazzBeanFactory"
+          class="ru.vasiliyryzhkovskiy.springcourse.JazzMusic"
+          factory-method="getJazzMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy">
     </bean>
 
     <bean id="musicPlayerBean"
@@ -24,9 +33,9 @@
         <!-- ссылка на BEAN !!!!  musicBean -->
     </bean>
 
-    <!-- bean для setter`a класса TestMusicSetter -->
-    <!-- Spring в классе MusicPlayer ищет метод setMusic - удаляет set и заглавную букву переводит в нижний регистр -->
-    <!-- поэтому здесь указано имеено name="music", а не name="setMusic" -->
+<!--     bean для setter`a класса TestMusicSetter-->
+<!--     Spring в классе MusicPlayer ищет метод setMusic - удаляет set и заглавную букву переводит в нижний регистр-->
+<!--     поэтому здесь указано имеено name="music", а не name="setMusic"-->
     <bean id="musicPlayerSetterBean"
           class="ru.vasiliyryzhkovskiy.springcourse.MusicPlayer">
         <property name="music" ref="musicBean"/>
@@ -80,6 +89,5 @@
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
     </bean>
-
 
 </beans>
