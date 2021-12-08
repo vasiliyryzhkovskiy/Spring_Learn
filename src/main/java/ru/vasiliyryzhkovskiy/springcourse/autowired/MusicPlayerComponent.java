@@ -9,19 +9,22 @@ import ru.vasiliyryzhkovskiy.springcourse.Music;
  */
 @Component
 public class MusicPlayerComponent {
+
+    // внедрение зависимости через поле
+    @Autowired
     private Music music;
 
     // внедрение зависимости через конструктор
-    //@Autowired
-    public MusicPlayerComponent(Music music) {
-        this.music = music;
-    }
+//    @Autowired
+//    public MusicPlayerComponent(Music music) {
+//      this.music = music;
+//    }
 
     // внедрение зависимости через сеттер
-    @Autowired
-    public void setMusic(Music music) {
-        this.music = music;
-    }
+//    @Autowired
+//    public void setMusic(Music music) {
+//        this.music = music;
+//    }
 
     public void playMusic() {
         System.out.println("Playing : " + music.getSong());
