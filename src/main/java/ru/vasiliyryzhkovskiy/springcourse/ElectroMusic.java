@@ -1,12 +1,5 @@
 package ru.vasiliyryzhkovskiy.springcourse;
 
-import org.springframework.stereotype.Component;
-
-/**
- *
- */
-
-//@Component("ElectroMusicBean")
 public class ElectroMusic implements Music {
     @Override
     public String getSong() {

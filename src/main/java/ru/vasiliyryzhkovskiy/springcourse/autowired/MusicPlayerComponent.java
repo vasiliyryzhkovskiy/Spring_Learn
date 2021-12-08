@@ -1,20 +1,18 @@
-package ru.vasiliyryzhkovskiy.springcourse;
+package ru.vasiliyryzhkovskiy.springcourse.autowired;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ru.vasiliyryzhkovskiy.springcourse.Music;
 
 /**
  * Такой же как и MusicPlayer, но для работы со Spring аннотацией @Autowired
  */
 @Component
-public class NewMusicPlayer {
+public class MusicPlayerComponent {
     private Music music;
 
-    /**
-     * для IoC
-     */
     @Autowired
-    public NewMusicPlayer(Music music) {
+    public MusicPlayerComponent(Music music) {
         this.music = music;
     }
 
