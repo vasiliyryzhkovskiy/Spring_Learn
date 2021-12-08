@@ -29,5 +29,4 @@ public class MusicPlayerComponent {
     public void playMusic() {
         System.out.println("Playing : " + music.getSong());
     }
-
 }
