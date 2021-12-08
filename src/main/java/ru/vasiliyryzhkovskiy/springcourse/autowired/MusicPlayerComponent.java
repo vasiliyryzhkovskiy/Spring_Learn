@@ -9,10 +9,12 @@ import ru.vasiliyryzhkovskiy.springcourse.Music;
  */
 @Component
 public class MusicPlayerComponent {
+    private ClassicalMusicComponent classicalMusic;
+    private RockMusicComponent rockMusic;
 
     // внедрение зависимости через поле
-    @Autowired
-    private Music music;
+//    @Autowired
+//    private Music music;
 
     // внедрение зависимости через конструктор
 //    @Autowired
@@ -26,7 +28,14 @@ public class MusicPlayerComponent {
 //        this.music = music;
 //    }
 
+    @Autowired
+    public MusicPlayerComponent(ClassicalMusicComponent classicalMusic, RockMusicComponent rockMusic) {
+        this.classicalMusic = classicalMusic;
+        this.rockMusic = rockMusic;
+    }
+
     public void playMusic() {
-        System.out.println("Playing : " + music.getSong());
+        System.out.println("Playing : " + classicalMusic.getSong());
+        System.out.println("Playing : " + rockMusic.getSong());
     }
 }

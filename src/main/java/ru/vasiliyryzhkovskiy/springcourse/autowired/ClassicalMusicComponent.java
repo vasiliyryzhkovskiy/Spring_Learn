@@ -6,6 +6,8 @@ import ru.vasiliyryzhkovskiy.springcourse.Music;
 /**
  * @author Vasiliy Ryzhkovskiy
  */
+
+@Component
 public class ClassicalMusicComponent implements Music {
     @Override
     public String getSong() {
