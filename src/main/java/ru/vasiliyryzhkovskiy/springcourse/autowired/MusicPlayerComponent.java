@@ -11,8 +11,15 @@ import ru.vasiliyryzhkovskiy.springcourse.Music;
 public class MusicPlayerComponent {
     private Music music;
 
-    @Autowired
+    // внедрение зависимости через конструктор
+    //@Autowired
     public MusicPlayerComponent(Music music) {
+        this.music = music;
+    }
+
+    // внедрение зависимости через сеттер
+    @Autowired
+    public void setMusic(Music music) {
         this.music = music;
     }
 
