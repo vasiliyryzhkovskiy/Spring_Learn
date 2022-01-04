@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestSpringComponent {
 
     public static void main(String[] args) {
-        // создаём переменную spring контекста, которая читает файл applicationContext.xml
+        // создаём переменную spring контекста, которая читает файл applicationContextAnnotation.xml
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContextAnnotation.xml");
 
         MusicPlayerComponent musicPlayer = context.getBean("musicPlayerComponent", MusicPlayerComponent.class);

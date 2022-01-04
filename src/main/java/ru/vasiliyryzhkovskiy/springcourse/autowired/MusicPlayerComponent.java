@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  * Такой же как и MusicPlayer, но для работы со Spring аннотацией @Autowired
  */
-@Component
+//@Component
 public class MusicPlayerComponent {
 
 
@@ -16,7 +16,7 @@ public class MusicPlayerComponent {
     private MusicComponent musicComponent1;
     private MusicComponent musicComponent2;
 
-    @Autowired
+    //@Autowired
     public MusicPlayerComponent(@Qualifier("classicalMusicComponent") MusicComponent musicComponent1,
                                 @Qualifier("rockMusicComponent") MusicComponent musicComponent2) {
         this.musicComponent1 = musicComponent1;
