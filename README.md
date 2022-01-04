@@ -6,7 +6,7 @@
 
 org.springframework
 
-spring-core (5.3.3)
-spring-beans (5.3.3)
-spring-context (5.3.3)
+spring-core (5.3.14)
+spring-beans (5.3.14)
+spring-context (5.3.14)
 

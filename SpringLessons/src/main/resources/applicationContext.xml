@@ -10,25 +10,25 @@
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
     <bean id="testBean"
-          class="ru.vasiliyryzhkovskiy.springcourse.TestBean">
+          class="ru.vasiliyryzhkovskiy.sja.TestBean">
         <constructor-arg value="Vasiliy"/>
     </bean>
 
     <bean id="musicBean"
-          class="ru.vasiliyryzhkovskiy.springcourse.ClassicalMusic"
+          class="ru.vasiliyryzhkovskiy.sja.ClassicalMusic"
           init-method="doMyInit"
           destroy-method="doMyDestroy">
     </bean>
 
     <bean id="jazzBeanFactory"
-          class="ru.vasiliyryzhkovskiy.springcourse.JazzMusic"
+          class="ru.vasiliyryzhkovskiy.sja.JazzMusic"
           factory-method="getJazzMusic"
           init-method="doMyInit"
           destroy-method="doMyDestroy">
     </bean>
 
     <bean id="musicPlayerBean"
-          class="ru.vasiliyryzhkovskiy.springcourse.MusicPlayer">
+          class="ru.vasiliyryzhkovskiy.sja.MusicPlayer">
         <constructor-arg ref="musicBean"/>
         <!-- ссылка на BEAN !!!!  musicBean -->
     </bean>
@@ -37,7 +37,7 @@
     <!--     Spring в классе MusicPlayer ищет метод setMusic - удаляет set и заглавную букву переводит в нижний регистр-->
     <!--     поэтому здесь указано имеено name="music", а не name="setMusic"-->
     <bean id="musicPlayerSetterBean"
-          class="ru.vasiliyryzhkovskiy.springcourse.MusicPlayer">
+          class="ru.vasiliyryzhkovskiy.sja.MusicPlayer">
         <property name="music" ref="musicBean"/>
         <property name="name" value="Some name"/>
         <property name="volume" value="50"/>
@@ -46,7 +46,7 @@
     <!-- bean для setter`a класса TestMusicScope -->
     <!-- поэтому здесь указано имеено name="music", а не name="setMusic" -->
     <bean id="musicPlayerScopeBean"
-          class="ru.vasiliyryzhkovskiy.springcourse.MusicPlayer"
+          class="ru.vasiliyryzhkovskiy.sja.MusicPlayer"
           scope="prototype">
         <property name="music" ref="musicBean"/>
         <property name="name" value="Some name"/>
@@ -55,28 +55,28 @@
 
     <!-- bean для property  класса TestMusicProperties -->
     <bean id="musicPlayerPropertyBean"
-          class="ru.vasiliyryzhkovskiy.springcourse.MusicPlayer">
+          class="ru.vasiliyryzhkovskiy.sja.MusicPlayer">
         <property name="music" ref="musicBean"/>
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
     </bean>
 
     <bean id="classicalMusicBean"
-          class="ru.vasiliyryzhkovskiy.springcourse.ClassicalMusic">
+          class="ru.vasiliyryzhkovskiy.sja.ClassicalMusic">
     </bean>
 
     <bean id="rockMusicBean"
-          class="ru.vasiliyryzhkovskiy.springcourse.RockMusic">
+          class="ru.vasiliyryzhkovskiy.sja.RockMusic">
     </bean>
 
     <bean id="technoMusicBean"
-          class="ru.vasiliyryzhkovskiy.springcourse.TechhoMusic">
+          class="ru.vasiliyryzhkovskiy.sja.TechhoMusic">
     </bean>
 
 
     <!-- bean for List<bean>   MusicPlayer -->
     <bean id="musicPlayerListsBean"
-          class="ru.vasiliyryzhkovskiy.springcourse.MusicPlayer">
+          class="ru.vasiliyryzhkovskiy.sja.MusicPlayer">
 
         <property name="musicList">
             <list>

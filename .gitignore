@@ -2,4 +2,7 @@
 /.idea
 /out
 /target
+*/target
 /.idea/
+/.iml/
+*.iml

@@ -1,7 +1,6 @@
 package annotation;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import ru.vasiliyryzhkovskiy.springcourse.ElectroMusic;
 import ru.vasiliyryzhkovskiy.springcourse.HipHopMusic;
 
 /**

@@ -1,8 +1,6 @@
 package ru.vasiliyryzhkovskiy.springcourse.autowired;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
 
 /**
  * Такой же как и MusicPlayer, но для работы со Spring аннотацией @Autowired

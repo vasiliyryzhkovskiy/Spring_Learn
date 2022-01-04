@@ -1,7 +1,5 @@
 package ru.vasiliyryzhkovskiy.springcourse;
 
-import org.springframework.stereotype.Component;
-
 /**
  *
  */
