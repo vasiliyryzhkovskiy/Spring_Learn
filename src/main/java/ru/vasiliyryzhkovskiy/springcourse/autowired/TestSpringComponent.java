@@ -1,10 +1,9 @@
 package ru.vasiliyryzhkovskiy.springcourse.autowired;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import ru.vasiliyryzhkovskiy.springcourse.MusicPlayer;
 
 /**
- *  Проверка Autowired
+ * Проверка Autowired
  */
 public class TestSpringComponent {
 
